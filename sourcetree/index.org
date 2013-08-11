@@ -11,38 +11,80 @@
 #+EXCLUDE_TAGS: noexport
 #+KEYWORDS: git sourcetree
 #+SELECT_TAGS: export
-#+OPTIONS: html-postamble:auto html-preamble:t tex:t
-#+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.0.7)
-#+HTML_CONTAINER: div
-#+HTML_DOCTYPE: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-#+HTML_HEAD:
-#+HTML_HEAD_EXTRA:
-#+HTML_INCLUDE_SCRIPTS:
-#+HTML_INCLUDE_STYLE:
-#+HTML_LINK_HOME:
-#+HTML_LINK_UP:
-#+HTML_MATHJAX:
-#+INFOJS_OPT:
 
 * 什麼是 Source Tree ?
 
    - [[http://sourcetreeapp.com/][Atlassian SourceTree]]
 
-** Download
+** 下載
 
-   - [[http://downloads.atlassian.com/software/sourcetree/windows/SourceTreeSetup_1.0.8.exe][Windows Version (Windows 7+)]] <1.0.8>
+   - [[http://downloads.atlassian.com/software/sourcetree/windows/SourceTreeSetup_1.0.8.exe][Windows Version]] (Windows 7+) <1.0.8>
    - [[http://downloads.atlassian.com/software/sourcetree/SourceTree_1.6.2.2.dmg][Mac version]] <1.6.2.2>
    - [[https://itunes.apple.com/tw/app/sourcetree-git-hg/id411678673?mt%3D12][AppStore]] (10.7.8+)
 
-* 設定個人資訊
+** SourceTree 介面簡介
+   - Bookmarks 介面
+   [[file:images/SourceTree-Bookmarks-View.png]]
+   - 主要介面
+   [[file:images/SourceTree-Source-View.png]]
 
-** 設定 Email
+* SourceTrees 超簡單使用
 
-  設定全域的使用者資訊
+** 設定 git 使用的 Email
+
+  [[file:images/SourceTree-email.png]]
+
+    設定全域的使用者資訊
+    #+BEGIN_EXAMPLE
+      git config --global user.name "username"
+      git config --global user.email "username@yooo.com"
+    #+END_EXAMPLE
+
+** git 指令/狀態圖
+
+  [[file:images/local-remote.png]]
+
+** 開始新的 git
+
+  最後面代入要產生的目標，若目標不存在會建立一個新的資料夾
   #+BEGIN_EXAMPLE
-git config --global user.name "username"
-git config --global user.email "username@yooo.com"
+    git init hello-git
+    > Initialized empty Git repository in ~/hello-git/.git/
   #+END_EXAMPLE
 
-  git 指令/狀態圖
-  [[file:image/local-remote.png]]
+** 開始舊專案開發
+  抓下個一個叫作 example 的專案，並且取名為 example
+  #+BEGIN_EXAMPLE
+    git clone "http://github.com/user/example.git" example
+  #+END_EXAMPLE
+
+** 抓取最新的程式碼
+   #+BEGIN_EXAMPLE
+     git pull
+   #+END_EXAMPLE
+
+** 把目前修改的東西記錄下來
+  把目前有記錄到的檔案，加上一個新的 commit，內容是 "Init commit"
+  #+BEGIN_EXAMPLE
+    git commit -am "Init commit"
+  #+END_EXAMPLE
+
+** 上傳變更的部份
+ #+BEGIN_EXAMPLE
+   git push origin
+ #+END_EXAMPLE
+
+** 開始新專案
+   [[file:images/SourceTree_CreateProject.png]]
+
+** 把目前修改的東西記錄下來
+   [[file:images/SourceTree_CommitView.png]]
+
+* 其他學習資源
+  - [[file:talk-homebrew.html][homebrew]]
+  - [[http://pcottle.github.io/learnGitBranching/?demo][從指令教學 git 行為的網頁]]
+  - [[http://www.atlassian.com/git/tutorial/git-basics][Git Basics | Atlassian Git Tutorial]]
+  - [[http://git-scm.com/book/zh][Pro Git]]
+  - [[http://blog.longwin.com.tw/2009/05/git-initial-env-setup-2009/][Git 基礎設定 (帳號的環境參數設定) | Tsung's Blog]]
+  - [[http://www.atlassian.com/software/sourcetree/overview][SourceTree overview]]
+  - [[http://thkoch2001.github.io/whygitisbetter/][Why Git is Better Than X]]
