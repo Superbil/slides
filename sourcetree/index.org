@@ -42,7 +42,7 @@
 
 ** git 指令/狀態圖
 
-  [[file:images/local-remote.png]]
+  [[file:images/git-local-remote.png]]
 
 ** 開始新的 git
 
