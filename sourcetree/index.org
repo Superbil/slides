@@ -23,10 +23,28 @@
    - [[https://itunes.apple.com/tw/app/sourcetree-git-hg/id411678673?mt%3D12][AppStore]] (10.7.8+)
 
 ** SourceTree 介面簡介
+
    - Bookmarks 介面
    [[file:images/SourceTree-Bookmarks-View.png]]
+
    - 主要介面
    [[file:images/SourceTree-main-view.png]]
+
+** git 指令/狀態圖
+
+  [[file:images/git-local-remote.png]]
+
+   - working dictionary
+     目前 git 正在工作的目錄
+
+   - staging area
+     準備要 commit 的東西
+
+   - local repo
+     本地端的 git 資料庫
+
+   - remote repo
+     遠端的 git 資料庫
 
 * SourceTrees 超簡單使用
 
@@ -34,51 +52,53 @@
 
   [[file:images/SourceTree-email.png]]
 
-    設定全域的使用者資訊
+    - Command line 指令
     #+BEGIN_EXAMPLE
       git config --global user.name "username"
       git config --global user.email "username@yooo.com"
     #+END_EXAMPLE
 
-** git 指令/狀態圖
+    設定全域的使用者資訊
 
-  [[file:images/git-local-remote.png]]
+** 開始新的 git 專案
 
-** 開始新的 git
+   [[file:images/SourceTree-CreateProject.png]]
 
-  最後面代入要產生的目標，若目標不存在會建立一個新的資料夾
+   - Command line 指令
   #+BEGIN_EXAMPLE
     git init hello-git
     > Initialized empty Git repository in ~/hello-git/.git/
   #+END_EXAMPLE
 
+   最後面代入要產生的目標，若目標不存在會建立一個新的資料夾
+
 ** 開始舊專案開發
+
   抓下個一個叫作 example 的專案，並且取名為 example
+
   #+BEGIN_EXAMPLE
     git clone "http://github.com/user/example.git" example
   #+END_EXAMPLE
 
 ** 抓取最新的程式碼
+
    #+BEGIN_EXAMPLE
      git pull
    #+END_EXAMPLE
 
 ** 把目前修改的東西記錄下來
+   [[file:images/SourceTree_CommitView.png]]
+
   把目前有記錄到的檔案，加上一個新的 commit，內容是 "Init commit"
   #+BEGIN_EXAMPLE
-    git commit -am "Init commit"
+    git commit --all -m "Init commit"
   #+END_EXAMPLE
 
 ** 上傳變更的部份
+
  #+BEGIN_EXAMPLE
    git push origin
  #+END_EXAMPLE
-
-** 開始新專案
-   [[file:images/SourceTree_CreateProject.png]]
-
-** 把目前修改的東西記錄下來
-   [[file:images/SourceTree_CommitView.png]]
 
 * 其他學習資源
   - [[file:talk-homebrew.html][homebrew]]
