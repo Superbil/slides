@@ -101,7 +101,6 @@
  #+END_EXAMPLE
 
 * 其他學習資源
-  - [[file:talk-homebrew.html][homebrew]]
   - [[http://pcottle.github.io/learnGitBranching/?demo][從指令教學 git 行為的網頁]]
   - [[http://www.atlassian.com/git/tutorial/git-basics][Git Basics | Atlassian Git Tutorial]]
   - [[http://git-scm.com/book/zh][Pro Git]]
