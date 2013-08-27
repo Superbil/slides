@@ -25,7 +25,7 @@
 ** SourceTree 介面簡介
 
    - Bookmarks 介面
-   [[file:images/SourceTree-Bookmarks-View.png]]
+   [[file:images/SourceTree-Bookmarks-view.png]]
 
    - 主要介面
    [[file:images/SourceTree-main-view.png]]
