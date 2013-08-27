@@ -50,6 +50,8 @@
 
 ** 設定 git 使用的 Email
 
+    設定全域的使用者資訊
+
   [[file:images/SourceTree-email.png]]
 
     - Command line 指令
@@ -58,9 +60,9 @@
       git config --global user.email "username@yooo.com"
     #+END_EXAMPLE
 
-    設定全域的使用者資訊
-
 ** 開始新的 git 專案
+
+   最後面代入要產生的目標，若目標不存在會建立一個新的資料夾
 
    [[file:images/SourceTree-CreateProject.png]]
 
@@ -70,32 +72,45 @@
     > Initialized empty Git repository in ~/hello-git/.git/
   #+END_EXAMPLE
 
-   最後面代入要產生的目標，若目標不存在會建立一個新的資料夾
-
 ** 開始舊專案開發
 
   抓下個一個叫作 example 的專案，並且取名為 example
 
+    - Command line 指令
   #+BEGIN_EXAMPLE
     git clone "http://github.com/user/example.git" example
   #+END_EXAMPLE
 
-** 抓取最新的程式碼
-
-   #+BEGIN_EXAMPLE
-     git pull
-   #+END_EXAMPLE
-
 ** 把目前修改的東西記錄下來
-   [[file:images/SourceTree_CommitView.png]]
 
   把目前有記錄到的檔案，加上一個新的 commit，內容是 "Init commit"
+
+   [[file:images/SourceTree-CommitView.png]]
+
+    - Command line 指令
   #+BEGIN_EXAMPLE
     git commit --all -m "Init commit"
   #+END_EXAMPLE
 
-** 上傳變更的部份
+** 抓取最新的程式碼 (Pull)
 
+   選擇 Pull 後，再選擇要 Pull 的 branch\\
+   可以選擇自動 merged，就會把 local 的部份和 remote 做 merge
+
+   [[file:images/SourceTree-Pull-View.png]]
+
+    - Command line 指令
+   #+BEGIN_EXAMPLE
+     git pull
+   #+END_EXAMPLE
+
+** 上傳變更的部份 (Push)
+
+   選擇 Push, 再選擇要 push 的 repository(remote)，下面可以選擇需要 push 的 branch
+
+   [[file:images/SourceTree-Push-View.png]]
+
+    - Command line 指令
  #+BEGIN_EXAMPLE
    git push origin
  #+END_EXAMPLE
