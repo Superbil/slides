@@ -9,4 +9,4 @@
 
    Simple Source Tree Introduction
 
-   [[http://superbil.github.io/slide/sourcetree/][Slide link]]
+   [[http://superbil.github.io/slides/sourcetree/][Slide link]]
